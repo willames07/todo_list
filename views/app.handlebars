@@ -1,0 +1,22 @@
+<div class="contenier_form">
+
+    <h2> adicionar nova tarefa</h2>
+    <form action="/newTarefa" method="post" class="new_tarefa">
+
+        <input type="text" name="tarefa" id="new_" class="form-control" placeholder="nova tarefa">
+        <input type="submit" value="criar" class="btn_sub btn btn-outline-primary">
+
+    </form>
+
+</div>
+<div class="contenier_list_">
+
+    <h4> minhas tarefas </h4>
+    {{#each tarefas}}
+        <div class="row_tarefa">
+            <input type="checkbox" class="feito" onclick="">
+            <p class="list_txt_tarefa">{{tarefa}}</p>
+            <a href="/newTarefa/remove/{{id}}"><i class="far fa-trash-alt"></i></a>
+        </div>
+    {{/each}}
+</div>
